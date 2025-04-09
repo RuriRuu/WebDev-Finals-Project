@@ -5,8 +5,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
   body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
   }
 
@@ -53,19 +53,32 @@
     height: 3px;
   }
 
-
   .header-right {
     float: right;
+  }
+
+  /* animations */
+  .float-in {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: floatIn 1s ease-out forwards;
+  }
+
+  @keyframes floatIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
 
   .sectionZeroCover {
     background-image: url(https://cdn.properties.emaar.com/wp-content/uploads/2023/06/FEATURES_1200X655_2-1200x600.jpg);
     background-size: cover;
-    left: 0;
     background-position: center;
     max-width: 100%;
-    height: 720px;
+    height: 600px;
+    left: 0;
   }
 
   .sectionZero {
@@ -96,33 +109,9 @@
 
   .sectionOne {
     width: 100%;
-    min-height: 500px;
     height: auto;
     padding: 0px;
     background-color: #ffffff80;
-  }
-
-  .sectionTwo {
-    width: 100%;
-    min-height: 500px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 50px 0px;
-  }
-
-  .S2Background {
-    background-image: url("https://renderatelier.com/wp-content/uploads/2022/08/1-1.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .sectionThree {
-    width: 100%;
-    min-height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-items: flex-start;
   }
 
   .miniSection {
@@ -131,15 +120,34 @@
   }
 
   .S1miniSection {
+    max-width: 1000px;
     padding: 20px;
-    width: 70%;
     height: auto;
     margin: auto;
-    background-color: rgb(248, 249, 251);
+    background-color: #ffffff80;
+  }
+
+  .S1textSection {
+    flex: 1;
   }
 
   .S1miniSection h1 {
     font-size: 40px;
+  }
+
+  .sectionTwo {
+    width: 100%;
+    min-height: 500px;
+    padding: 20px 0px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    color: #666;
+  }
+
+  .S2Background {
+    /* background-image: url("https://renderatelier.com/wp-content/uploads/2022/08/1-1.jpeg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .S2Macrosection {
@@ -183,6 +191,17 @@
     margin: 10px;
   }
 
+  .sectionThree {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    background-color: #ffffff;
+    color: #666;
+  }
+
   .S3section {
     padding: 5px;
     width: 70%;
@@ -202,31 +221,39 @@
     aspect-ratio: 16/9;
   }
 
-  /* .carouselPop1 {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-  }
-
-  .carouselPop2 {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .carouselPop3 {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-  } */
-
   img {
     vertical-align: middle;
     width: 100%;
   }
 
-  .S1imgframe {
-    max-width: 80%;
-    margin: auto;
+  .frame {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .map {
+    margin: auto;
+  }
+
+  .S1imgframe {
+    flex: 1;
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    aspect-ratio: 16/10;
+  }
+
+  .s1text {
+    flex: 2;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #666;
+    padding: 20px;
+    text-align: justify;
+    text-transform: uppercase;
   }
 
   .slide {
@@ -308,6 +335,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    color: #666;
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
@@ -420,9 +448,8 @@
 </style>
 
 <body>
-
   <div class="sectionZeroCover">
-    <div class="header">
+    <div class="header float-in">
 
       <a class="logo">
         <p>Emaar</p>
@@ -434,84 +461,73 @@
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
       </div>
-
     </div>
-    <!-- <div class="sectionZero">
-      <div class="titleSpace">Emaar Beachfront Address</div>
-    </div> -->
   </div>
-
-  <!-- MAKE SECTION ZERO TO FIT CANVA IMAGE OVER COVER IMAGE bahala na yung idea to transparent the header over the cover -->
-  <!-- ask mo nalang si aye ai later -->
 
   <div class="sectionOne">
     <div class="S1miniSection">
-      <h1>Emaar Beachfront</h1>
-      <div class="S1textSection">
-        <p>Emaar introduces Beachfront Address, an exclusive waterfront development redefining luxury living in Dubai’s
+      <div class="frame">
+        <span class="s1text">
+          <h1>Emaar Beachfront</h1>
+
+          Emaar introduces Beachfront Address, an exclusive waterfront development redefining luxury living in Dubai’s
           Jumeirah district. Filled to the brim with various amenties and stunning views of the Arabian Gulf and Dubai
           Marina, this master-planned community offers a seamless blend of sophistication and tranquility.
-        </p>
+        </span>
+        <div class="carousel">
+          <div class="slide">
+            <div class="slideNo"> 1 / 5 </div>
+            <img src="https://static.tildacdn.com/tild3835-3637-4436-a332-393664626538/736150472307e18ae14a.jpg"
+              style="width: 100%;">
+          </div>
+
+          <div class="slide">
+            <div class="slideNo"> 2 / 5 </div>
+            <img src="https://static.tildacdn.com/tild3732-3062-4038-b961-643862383834/b4c9675a11ce8aa53824.jpg"
+              style="width: 100%;">
+          </div>
+
+          <div class="slide">
+            <div class="slideNo"> 3 / 5 </div>
+            <img src="https://static.tildacdn.com/tild6161-6165-4130-b737-323035353931/7dd4e015a4903f51e19c.jpg"
+              style="width: 100%;">
+          </div>
+
+          <div class="slide">
+            <div class="slideNo"> 4 / 5 </div>
+            <img src="https://cdn.properties.emaar.com/wp-content/uploads/2020/03/mth_emaar_est_View-08_a04-scaled.jpg"
+              style="width: 100%;">
+          </div>
+
+          <div class="slide">
+            <div class="slideNo"> 5 / 5 </div>
+            <img src="https://cdn.properties.emaar.com/wp-content/uploads/2022/06/EBF_ATB_WEBSITE_UNIT_TYPE_2.jpg"
+              style="width: 100%;">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+          <a class="next" onclick="plusSlides(1)">&gt;</a>
+        </div>
       </div>
-
-      <div class="carousel">
-        <div class="slide">
-          <div class="slideNo"> 1 / 5 </div>
-          <img src="https://static.tildacdn.com/tild3835-3637-4436-a332-393664626538/736150472307e18ae14a.jpg"
-            style="width: 100%;">
-        </div>
-
-        <div class="slide">
-          <div class="slideNo"> 2 / 5 </div>
-          <img src="https://static.tildacdn.com/tild3732-3062-4038-b961-643862383834/b4c9675a11ce8aa53824.jpg"
-            style="width: 100%;">
-        </div>
-
-        <div class="slide">
-          <div class="slideNo"> 3 / 5 </div>
-          <img src="https://static.tildacdn.com/tild6161-6165-4130-b737-323035353931/7dd4e015a4903f51e19c.jpg"
-            style="width: 100%;">
-        </div>
-
-        <div class="slide">
-          <div class="slideNo"> 4 / 5 </div>
-          <img src="https://cdn.properties.emaar.com/wp-content/uploads/2020/03/mth_emaar_est_View-08_a04-scaled.jpg"
-            style="width: 100%;">
-        </div>
-
-        <div class="slide">
-          <div class="slideNo"> 5 / 5 </div>
-          <img src="https://cdn.properties.emaar.com/wp-content/uploads/2022/06/EBF_ATB_WEBSITE_UNIT_TYPE_2.jpg"
-            style="width: 100%;">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&lt;</a>
-        <a class="next" onclick="plusSlides(1)">&gt;</a>
-      </div>
-
-      <br>
-      <!-- talks about towers and amenities -->
-      <img class="S1imgframe" src="https://manage.tanamiproperties.com/Project/LayoutPlan/1271/Gallery/1302.webp">
-      <p>The community is composed of nine buildings and a 13,000 sqm mall, totalling up to 10,000 units for available
-        for residence and retail. Included in the location access to a 1.4km beach and the Dubai Marina docks. The
-        location also has road access to the Palm Jumeirah, Sheikh Zayed Road, and Downtown Dubai allowing for journeys
-        beyond Dubai and to the rest of the UAE.
-      </p>
-
-      <!-- talks about location and access to other places in Dubai -->
-      <!-- REWORK PARAGRAPH -->
-      <img class="S1imgframe"
-        src="https://off-planproperties.ae/wp-content/uploads/2023/09/Emaar-Beachfront-Location-Map.png">
-      <p>Nestled in a prime location with direct access to pristine beaches, Emaar Beachfront offers an unparalleled
-        living experience, combining elegance, comfort, and modern convenience to create a truly exceptional lifestyle.
-        From waking up to breathtaking sunrises over the Arabian Gulf to enjoying world-class dining, shopping, and
-        entertainment just moments away, every aspect of life at Emaar Beachfront is designed to inspire.
-        So whether you're searching for a luxurious new home, a prime investment opportunity, or the perfect holiday
-        retreat, Emaar Beachfront is your gateway to an extraordinary seaside lifestyle.
-      </p>
     </div>
   </div>
 
+  <div class="sectionOne">
+    <div class="frame">
+      <img class="S1imgframe" src="https://manage.tanamiproperties.com/Project/LayoutPlan/1271/Gallery/1302.webp">
+      <span class="s1text">
+        <h2>Emaar Beachfront Community</h2>
+
+        The community is composed of nine buildings and a 13,000 sqm mall, totalling up to
+        10,000 units for available
+        for residence and retail. Included in the location access to a 1.4km beach and the Dubai Marina docks. The
+        location also has road access to the Palm Jumeirah, Sheikh Zayed Road, and Downtown Dubai allowing for
+        journeys
+        beyond Dubai and to the rest of the UAE.
+      </span>
+    </div>
+  </div>
+  
   <!-- ABOUT THE COMPANY AND INTRODUCE THE PROPERTY -->
   <div class="S2Background">
     <div class="sectionTwo">
